@@ -1,0 +1,1 @@
+* ES6为字符串添加了Iterator接口，字符串也可以由for..of遍历。(demo1: demos/demo-iterator/iterator-1.js)
