@@ -1,5 +1,12 @@
 #### 概念
 #### 常用函数 (demo1: demos/demo-string/string-1.js)
+* charAt
+* startsWith
+* endsWith
+* includes
+* repeat
+* split
+* match
 #### 模本字符串 (demo2: demos/demo-string/string-2.js)
 * 写法： 反引号
 * 用处

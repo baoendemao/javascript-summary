@@ -25,5 +25,10 @@ console.log(s.includes('ll'));    // true
 console.log(s.repeat(2));   // hellohello
 console.log(s.repeat(Infinity)); // 报错 RangeError
 
+// split函数
+console.log(s.split('e'));    // 返回数组 ["h", "llo"]
 
-
+// match函数
+var s2 = "hello world";
+console.log(typeof (s2.match(/ll/)));   // object，match()返回数组
+console.log(s2.match(/ll/));            // 返回数组["ll", index: 2, input: "hello world"]
