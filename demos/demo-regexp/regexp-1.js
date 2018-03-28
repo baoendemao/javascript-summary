@@ -1,12 +1,24 @@
-var regExp = new RegExp('he');
-console.log(regExp.flags);              // 默认的修饰符是空
-console.log(/he/.test('hello'));        // true
-console.log(regExp.test('hello'));      // true
-console.log(regExp.test('HEllo'));      // false， 默认是严格大小写匹配的
-console.log(regExp.test('welcome'));    // false
+// RegExp对象
+function func() {
+    var regExp = new RegExp('hello\\d');
+    console.log(regExp);                // 打印/hello\d/
 
-var regExp = new RegExp('he', 'i');
-console.log(regExp.test('HEllo'));      // true，指定修饰符i，忽略大小写匹配
-console.log(regExp.exec('HELLO'));      // 返回 ["HE", index: 0, input: "HELLO"]
+    var regExp = new RegExp('hello\\d', 'i');
+    console.log(regExp);                // 打印/hello\d/i
 
+    var regExp = new RegExp('hello\\d', 'g');
+    console.log(regExp);                // 打印/hello\d/g
 
+    var regExp = new RegExp('hello\\d', 'y');
+    console.log(regExp);                // 打印/hello\d/y
+}
+func();
+
+// 使用正则表达式来new RegExp对象
+function func2() {
+    var reg1 = /hello\d/;
+    var regExp = new RegExp(reg1);      
+    console.log(regExp);                // 打印/hello\d/
+    console.log(typeof reg1);           // object
+    console.log(typeof regExp);         // object
+}
