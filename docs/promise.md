@@ -10,8 +10,8 @@
         console.log(resp.data);
     });
     ```
-#### Promise   
-* new Promise() 和 Promise.prototype.then()
+#### Promise
+* new Promise() 和 Promise.prototype.then()  （demo: demos/demo-promise/promise-1.js）
 ```
 let promise = new Promise((resolve, reject) => {
     if (异步结果成功) {
@@ -21,8 +21,8 @@ let promise = new Promise((resolve, reject) => {
     }
 });
 promise.then(
-    (value) => { // Promise对象是Resolved状态 },
-    (value) => { // Promise对象是Rejected状态 }
+    (value) => { // 成功： Promise对象是Resolved状态 },
+    (value) => { // 失败： Promise对象是Rejected状态 }
 );
 ```
 * 三种状态
@@ -32,7 +32,7 @@ promise.then(
 * 如何改变Promise的状态
     * 触发条件
         * 异步的结果
-    * 状态转化机
+    * 状态转换机
         * Pending => Resolved
             * resolve函数将Promise对象的状态从Pending变成Resolved
         * Pending => Rejected
