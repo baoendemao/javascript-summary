@@ -11,4 +11,6 @@
 * [解析赋值](https://github.com/baoendemao/javascript-summary/tree/master/docs/assignment.md)
 * [call和apply](https://github.com/baoendemao/javascript-summary/tree/master/docs/call_apply.md)
 * [this](https://github.com/baoendemao/javascript-summary/tree/master/docs/this.md)
+* [Object](https://github.com/baoendemao/javascript-summary/tree/master/docs/object.md)
+
 
