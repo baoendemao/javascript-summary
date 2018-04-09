@@ -36,3 +36,8 @@ function func(a=12) {
 	console.log(a);    // 12
 }
 ```
+#### 函数的形参的个数
+```
+function func(a, b, c, d, e) {}
+console.log(func.length);     // 5,   得到该函数的形参的个数是5个
+```
