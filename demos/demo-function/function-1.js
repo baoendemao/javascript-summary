@@ -13,3 +13,8 @@ function func2() {
 func2();            // 输出1
 
 
+function func3(a, b=2) {
+	console.log(a);         // undefined
+	console.log(b);         // 2
+}
+func3();
