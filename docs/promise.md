@@ -1,3 +1,7 @@
+#### 异步
+* 什么是异步？
+    * 异步和同步是相对的：同步是单线程中，从上往下逐个执行，在一个结果没有返回之前，不执行下面的操作；异步是指在没有得到结果之前，可以继续下面的操作，通过回调操作来通知调用者执行的结果。
+* 单线程
 #### 通过axios近距离接触Promise
 * axios是基于promise的http请求客户端，可以同时在浏览器和Node端同时使用。
 * axios安装
@@ -10,8 +14,8 @@
         console.log(resp.data);
     });
     ```
-#### Promise   
-* new Promise() 和 Promise.prototype.then()
+#### Promise
+* new Promise() 和 Promise.prototype.then()  （demo: demos/demo-promise/promise-1.js）
 ```
 let promise = new Promise((resolve, reject) => {
     if (异步结果成功) {
@@ -21,8 +25,8 @@ let promise = new Promise((resolve, reject) => {
     }
 });
 promise.then(
-    (value) => { // Promise对象是Resolved状态 },
-    (value) => { // Promise对象是Rejected状态 }
+    (value) => { // 成功： Promise对象是Resolved状态 },
+    (value) => { // 失败： Promise对象是Rejected状态 }
 );
 ```
 * 三种状态
@@ -32,7 +36,7 @@ promise.then(
 * 如何改变Promise的状态
     * 触发条件
         * 异步的结果
-    * 状态转化机
+    * 状态转换机
         * Pending => Resolved
             * resolve函数将Promise对象的状态从Pending变成Resolved
         * Pending => Rejected
