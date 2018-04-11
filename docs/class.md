@@ -40,4 +40,3 @@ Person.__proto__  === Function.prototype
 Student.__proto__ === Person
 
 ```
-#### 原型

@@ -1,3 +1,5 @@
+在JavaScript中， 函数是“一等公民”。
+
 #### function的封装类
 * Function
 #### 构造函数
@@ -25,19 +27,55 @@ Person.prototype.constructor === Person   // true
 function Student() {
 
 }
+
 Student.prototype = new Person();     // 继承父类
 var s1 = new Student();
 ```
+
 #### 箭头函数  (demo: demos/demo-function/function-2.js)
 * 箭头函数可以修正map函数里的this指向问题
+
 #### 函数默认参数
+
 ```
 function func(a=12) {
 	console.log(a);    // 12
 }
 ```
+
 #### 函数的形参的个数
+
 ```
+
 function func(a, b, c, d, e) {}
 console.log(func.length);     // 5,   得到该函数的形参的个数是5个
+
 ```
+
+#### 纯函数
+函数的输出只依赖输入，和其他外部函数和外部变量无关。
+
+纯函数的优点：
+* 可测试性，因为相同的输入，总会产生相同的输出
+* 实现可缓存性（Cacheable） 
+
+```
+var memoize = function(f) {
+    var cache = {};
+
+    return function() {
+        var arg_str = JSON.stringify(arguments);
+        cache[arg_str] = cache[arg_str] ? cache[arg_str] + '(from cache)' : f.apply(f, arguments);
+        return cache[arg_str];
+    };
+};
+
+var squareNumber  = memoize(function(x){ return x*x; });
+
+console.log(squareNumber(4));      // 16
+console.log(squareNumber(4));      // 16(from cache) 
+console.log(squareNumber(5));      // 25
+console.log(squareNumber(5));      // 25(from cache)
+
+```
+
