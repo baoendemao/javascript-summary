@@ -81,4 +81,32 @@ promise.then(
             * resolve函数将Promise对象的状态从Pending变成Resolved
         * Pending => Rejected
             * reject函数将Promise对象的状态从Pending变成Rejected
-* Promise对象提供的接口
+
+* Promise如何捕获异
+    * then里写两个实参：success和error的回调函数
+
+    ```
+
+    promise.then(
+        function(){console.log('success'); },  
+        function(){console.log('error');}
+    ).
+
+    ```
+
+    * 最后一个then下面加上.catch
+
+    ```
+
+    promise.then(
+        function(){console.log('success'); }
+    ).then(
+        function() {}
+    ).then(
+        function(){}
+    ).catch(function(e){
+        console.log(e);
+    });
+
+    ```
+
