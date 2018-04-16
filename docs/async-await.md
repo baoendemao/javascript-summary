@@ -1,5 +1,5 @@
 #### 用法
-async/await是基于Promise的，但是使用的是完全同步的写法
+* async/await是基于Promise的，但是使用的是完全同步的写法
 
 ```
 var fun2 = async function () {
@@ -8,3 +8,9 @@ var fun2 = async function () {
 }
 ```
 
+* 
+#### async/await的优点
+* 代码更简洁
+* try-catch处理异常
+* 添加条件判断更直观
+* 更清晰的错误堆栈和调试步骤

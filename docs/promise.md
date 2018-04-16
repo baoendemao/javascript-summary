@@ -54,7 +54,7 @@ promise.then((resp) => {
 
 ```
 
-#### Promise
+#### Promise的使用
 * new Promise() 和 Promise.prototype.then()  （demo: demos/demo-promise/promise-1.js）
 ```
 let promise = new Promise((resolve, reject) => {
@@ -109,4 +109,3 @@ promise.then(
     });
 
     ```
-
