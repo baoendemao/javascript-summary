@@ -1,7 +1,5 @@
 在JavaScript中， 函数是“一等公民”。
 
-#### function的封装类
-* Function
 #### 构造函数
 ```
 function Person(name, id) {
@@ -18,10 +16,31 @@ p1.getName();    // 'hello'
 
 ```
 #### 原型
+
 ```
 Person.prototype.constructor === Person   // true
 
 ```
+
+
+```
+function func(){}
+Object.getPrototypeOf(func) === Function.prototype;   // true
+Object.getPrototypeOf(Function.prototype)  === Object.prototype;   // true
+Object.getPrototypeOf(Object.prototype) === null;    // true
+
+// 也可以写做：
+func.__proto__ ===  Function.prototype;      // true
+Function.prototype.__proto__ === Object.prototype;    // true
+Object.prototype.__proto__ === null;      // true
+
+```
+
+原型链作为实现继承的主要方法：每个实例对象都包含一个指向原型对象的内部指针__proto__, 
+当读取实例对象的某个属性的时候，会先寻找对象本身的属性，如果没有，就去原型链中寻找。
+如果到Object.prototype也找不到，则返回undefined。
+要注意的是：func的原型不是Function，而是Function.prototype。
+
 #### 继承
 ```
 function Student() {

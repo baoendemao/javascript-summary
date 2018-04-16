@@ -1,3 +1,23 @@
+* __proto__
+
+```
+
+var a = [1, 2, 3];
+a.__proto__ === Array.prototype;      // true
+Array.prototype.__proto__ === Object.prototype;    // true
+Object.prototype.__proto__ === null;     // true
+
+```
+JS中的对象追根溯源是null。由于有些浏览器不支持__proto__，应尽量少用，而改用Object.getPrototypeOf()来获取原型。
+
+* Object.getPrototypeOf()   
+
+```
+Object.getPrototypeOf(Object.prototype);  // null
+
+```
+
+
 * Object.defineProperty()  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-object/object-1.js)
 ```
   Object.defineProperty(obj, key, {
