@@ -135,3 +135,18 @@ function func13() {
 	const c = 1;
 	console.log(window.c);		// undefined
 }
+
+// 函数表达式，声明不提升
+function func14() {
+	aa();
+	var aa = function() {console.log('hello');}
+}
+func14();   // 出错，因为aa是函数表达式，函数声明不提升，所以aa()会报错说aa is not a function
+
+
+// 函数提升
+function func15() {
+	aa();
+	function aa () {console.log('hello');}
+}
+func15();    // 打印hello，函数aa声明提升
