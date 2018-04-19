@@ -55,7 +55,7 @@ promise.then((resp) => {
 ```
 
 #### Promise的使用
-* new Promise() 和 Promise.prototype.then()  （demo: demos/demo-promise/promise-1.js）
+* new Promise() 和 Promise.prototype.then() [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-promise/promise-1.js)
 ```
 let promise = new Promise((resolve, reject) => {
     if (异步结果成功) {

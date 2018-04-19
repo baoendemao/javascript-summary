@@ -150,3 +150,13 @@ function func15() {
 	function aa () {console.log('hello');}
 }
 func15();    // 打印hello，函数aa声明提升
+
+function func16() {
+	try {
+		throw 'hello';
+
+	} catch(a) {
+		console.log(a);   
+	}
+}
+func16();   // 打印hello

@@ -1,4 +1,4 @@
-#### 变量的类型    (demo: demos/demo-variable/variable-1.js)
+#### 变量的类型   [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-variable/variable-1.js)
 * const
     * 声明的时候必须同时赋值
 #### 变量的声明
@@ -22,6 +22,7 @@
     * 块级作用域
         * 大括号{}
         * let和const声明的变量会将变量的作用域限制在块级作用域内部，而var则不会 
+        * try..catch..中的catch
 * 作用域的优先级
     * 不同作用域内，内部作用域覆盖外部作用域
 * 慎用with和eval
