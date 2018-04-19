@@ -6,11 +6,3 @@ function func(a, b, c) {
 }
 func(2, 3, 4);
 
-function func2() {
-	function callName() {
-		console.log(this.name);
-	}
-	this.name = 'hello';
-	callName.call(this);    
-}
-func2();    // 打印hello
