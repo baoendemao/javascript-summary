@@ -28,3 +28,12 @@ callName.call(this);   // hello
 ```
 
 * new绑定
+
+```
+function func(a) {
+	this.a = a;
+}
+var obj = new func(1);
+console.log(obj.a);   // 1
+ 
+```

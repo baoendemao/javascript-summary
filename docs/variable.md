@@ -1,6 +1,5 @@
-#### 变量的类型   [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-variable/variable-1.js)
-* const
-    * 声明的时候必须同时赋值
+#### 变量  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-variable/variable-1.js)
+
 #### 变量的声明
 * 变量声明提升
     * var
@@ -9,7 +8,7 @@
     * let和const
     * 函数表达式, 形如：var func = function() { }
 * 同一级变量作用域内重复声明
-    * let和const不允许
+    * let和const不允许, 其中const声明的时候必须同时赋值
     * var允许 
 #### 变量作用域
 * 作用域的分类

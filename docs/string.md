@@ -1,6 +1,6 @@
-#### 概念
 #### 常用函数  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-1.js) 
 * charAt
+* indexOf
 * startsWith
 * endsWith
 * includes
@@ -8,6 +8,7 @@
 * split
 * match
     * 在字符串找那个检索指定的值，或找到一个或多个正则的匹配
+* toUpperCase
 #### 模本字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-2.js) 
 * 写法： 反引号包裹字符串
 * 用处

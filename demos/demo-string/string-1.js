@@ -1,4 +1,9 @@
 var s = 'hello';
+s.length;    // 5
+s[1];        // 'e'
+s[1] = 'w';
+s[1];       // 'e'， 可见字符串虽然可以像数组一样下标取值，但是字符串不可像数组一样通过下标修改值
+
 
 // 得到s的类型
 console.log(typeof s);   // string
@@ -11,6 +16,8 @@ for (let i of s) {
 // 得到字符串s某个位置的字符
 console.log(s.charAt(0));  // h
 console.log(s.charAt(1));  // e
+
+console.log(s.indexOf('e'));  // 1
 
 // 是否字符串s是以he开头的，返回布尔值true或false
 console.log(s.startsWith('he'));  // true
@@ -32,3 +39,7 @@ console.log(s.split('e'));    // 返回数组 ["h", "llo"]
 var s2 = "hello world";
 console.log(typeof (s2.match(/ll/)));   // object，match()返回数组
 console.log(s2.match(/ll/));            // 返回数组["ll", index: 2, input: "hello world"]
+
+// toUpperCase函数
+console.log(s.toUpperCase());     // HELLO
+console.log("HELLO".toLowerCase());     // hello
