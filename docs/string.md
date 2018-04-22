@@ -20,3 +20,13 @@
 * 拓展问题
     * 如何将变量转换成number类型的
         * 经过parseFloat()处理，如果isNaN()为true，则转换失败，如果为false，则返回parseFloat处理后的结果。
+#### 包装类String
+
+```
+var s = new String('hello');
+s.__proto__ === String.prototype;   // true
+s instanceof String;                // true
+typeof s;                           // "object"
+Object.prototype.toString.call(s);  // "[object String]"
+
+```
