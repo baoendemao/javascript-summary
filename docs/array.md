@@ -7,6 +7,7 @@
 * reverse  数组反转
 * slice  从指定下标开始截取数组
 * shift  数组移除第一个元素
+* toString  返回逗号连接的字符串
 #### 如何判断是不是数组？  
 * Array.isArray([1, 2, 3])   // true
 * Object.prototype.toString.call([1, 2, 3])  === '[object Array]'   // true
