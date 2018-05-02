@@ -40,7 +40,8 @@ Object.getOwnPropertyDescriptor(o, 'a');  // {value: 1, writable: true, enumerab
   * typeof 
   * Object.prototype.toString.call()
 * 判断对象是否含有某个属性
-  * Object.prototype.hasOwnProperty.call({a: 1}, 'a')
+  * Object.prototype.hasOwnProperty.call({a: 1}, 'a') 检查是否在对象自身属性中，不会检查原型链
+  * 'a' in {a: 1} 会通过原型链检查
 * 如何得到key的数组
 ```
 Object.keys(['a', 'b', 'c'])    //  ["0", "1", "2"]
@@ -66,7 +67,7 @@ Object.is(NaN, NaN);  // true,  返回 NaN !== NaN
 * 区分Object.create(null)和{}
 
 ```
-var a = Object.create(null);
+var a = Object.create(null);   // 原型链没有连接到Object.prototype
 a.__proto__ === undefined
 
 var b  = {};
