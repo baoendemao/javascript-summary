@@ -98,3 +98,19 @@ o.c === o2.c  // true
 
 
 ```
+
+* instanceof和isPrototypeOf
+
+<br/>
+
+instanceof是在对象的原型链上查找是否有指向右操作符的prototype的对象，isPrototype是在原型链上直接判断是否是某个对象的原型。
+
+```
+function Foo() {}
+var o = new Foo();
+o instanceof Foo;                   // true
+o instanceof Object;                // true
+Foo.prototype.isPrototypeOf(o);     // true
+Object.prototype.isPrototypeOf(o);  // true
+
+```

@@ -47,7 +47,7 @@ function Student() {
 
 }
 
-Student.prototype = new Person();     // 继承父类，ES5通过在prototype上添加父类的属性方法，而ES6是通过extends
+Student.prototype = Object.create(Person.prototype);     // 继承父类，ES5通过在prototype上添加父类的属性方法，而ES6是通过extends
 var s1 = new Student();
 ```
 
