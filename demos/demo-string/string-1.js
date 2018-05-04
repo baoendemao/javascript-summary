@@ -17,6 +17,7 @@ for (let i of s) {
 console.log(s.charAt(0));  // h
 console.log(s.charAt(1));  // e
 
+// 获取字符所在的索引下标
 console.log(s.indexOf('e'));  // 1
 
 // 是否字符串s是以he开头的，返回布尔值true或false
@@ -43,3 +44,12 @@ console.log(s2.match(/ll/));            // 返回数组["ll", index: 2, input: "
 // toUpperCase函数
 console.log(s.toUpperCase());     // HELLO
 console.log("HELLO".toLowerCase());     // hello
+
+// slice函数
+console.log(s.slice(1, 3));     // "el"
+
+// substring函数
+console.log(s.substring(1, 3));   // "el"
+
+// substr函数
+console.log(s.substr(1, 3));    // "ell"
