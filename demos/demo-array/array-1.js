@@ -55,13 +55,80 @@ function func6(a, b , c, d, e) {
 }
 func6(11, 22, 33, 44, 55);
 
+// 数组常用API
 function func7() {
 	var a = ['h', 'e', 'l', 'l', 'o'];
 	console.log(a.length);            // 5
+
 	console.log(a.indexOf('e'));      // 1
+
 	console.log(a.concat([1,2,3]));   // [['h', 'e', 'l', 'l', 'o', 1, 2, 3]
+
 	console.log(a.reverse());         // ["o", "l", "l", "e", "h"]
 
-	
+	a.forEach(function(value, index) {
+		console.log(value);    // 依次输出 o l l e h
+		console.log(index);	   // 依次输出 0 1 2 3 4
+	});
+
+	a.map(function(value, index) {
+		console.log(value);    // 依次输出 o l l e h
+		console.log(index);    // 依次输出 0 1 2 3 4
+	});
+
+	a.every(function(value, index) {
+		if (value != 'w') {	
+			console.log(index);    // 依次输出 0 1 2 3 4
+			return true;           // 返回true，因为每一个元素都不等于w
+		}
+	});
+
+	a.some(function(value, index) {
+		if (value != 'h') {	
+			console.log(index);     
+			return true;            // 有一个不等于h，就return true
+		}
+	});
+
+	a.filter(function(value, index) {
+		if (value != 'h') {
+			return true;            // 返回 ["e", "l", "l", "o"]
+		}
+	})
+
+	// 改变原数组
+	a.sort(function(a,b){     
+		return a-b;        // 输出  ["o", "l", "l", "e", "h"]
+	});
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 改变原数组
+	a.shift();  // 'h'
+	a;          //  ["e", "l", "l", "o"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 改变原数组
+	a.unshift(12);   // 6
+	a;         // (6) [12, "h", "e", "l", "l", "o"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 改变原数组
+	a.reverse();
+	a;        // (5) ["o", "l", "l", "e", "h"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 改变原数组
+	a.splice(1, 2);   // 从下标1开始，删除两个元素
+	a;   // ["h", "l", "o"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+	a.splice(1, 2, 123);   // 从下标1开始，删除两个元素，并在当前位置插入123这个值
+	a;  //  ["h", 123, "l", "o"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 不改变原数组
+	a.slice(1, 3);   //  获取下标 [1, 3) 的数据，["e", "l"] 
+	a;                // ["h", "e", "l", "l", "o"]
+	a.slice(1);      //  获取下标1到末尾的数据，["e", "l", "l", "o"]
+
 }
 func7();
