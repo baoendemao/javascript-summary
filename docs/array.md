@@ -1,21 +1,23 @@
 #### 常用函数       [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-array/array-1.js)
-* indexOf  获取具体值所在的下标
-* concat   数组连接
+* indexOf  获取具体值所在的下标, 找到的第一个
+* lastIndexOf  获取具体值所在的下标，找到的最后一个
+* concat   数组连接，不改变原数组
     * [].concat.call([1, 2, 3], [3, 4, 5])   // [1, 2, 3, 3, 4, 5]
 * map 将数组重新处理各个元素的值
     * ['h', 'e', 'l', 'l', 'o'].map(function(i) { })
-* reverse  数组反转
+* reverse  数组反转， 改变原数组
 * slice  从指定下标开始截取数组, 不改变原数组
 * splice 删除或者替换， 改变原数组
 * shift  数组移除第一个元素，改变原数组
 * unshift   在数组的开头添加元素，改变原数组
-* toString  返回逗号连接的字符串
 * forEach  遍历数组的每个元素，参数是function(value, index) {}
 * every   遍历数组的每个元素，判断每个元素是否都满足一个条件, 只要有一个不满足，就return false
 * some    遍历数组的每个元素，只要有一个满足条件，就跳出return true
 * sort   数组的排序，参数是function(a, b) {return a-b 或者 b-a}，改变原数组
 * filter  通过一个条件过滤数组，返回符合条件的新数组，不改变原数组
 * pop   删除最后一个元素，改变原数组
+* join  连接成一个字符串，不改变原数组， 默认分隔符是逗号
+* toString  返回逗号连接的字符串
 #### 如何判断是不是数组？  
 * Array.isArray([1, 2, 3])   // true
 * Object.prototype.toString.call([1, 2, 3])  === '[object Array]'   // true

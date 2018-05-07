@@ -62,9 +62,7 @@ function func7() {
 
 	console.log(a.indexOf('e'));      // 1
 
-	console.log(a.concat([1,2,3]));   // [['h', 'e', 'l', 'l', 'o', 1, 2, 3]
-
-	console.log(a.reverse());         // ["o", "l", "l", "e", "h"]
+	console.log(a.lastIndexOf('l'));  // 3
 
 	a.forEach(function(value, index) {
 		console.log(value);    // 依次输出 o l l e h
@@ -95,6 +93,10 @@ function func7() {
 			return true;            // 返回 ["e", "l", "l", "o"]
 		}
 	})
+
+	// 不改变原数组
+	a.concat([1,2,3]);   // [['h', 'e', 'l', 'l', 'o', 1, 2, 3]
+	a;        // (5) ["o", "l", "l", "e", "h"]
 
 	// 改变原数组
 	a.sort(function(a,b){     
@@ -133,5 +135,13 @@ function func7() {
 	// 改变原数组
 	a.pop();		// 'o'
 	a;              // ["h", "e", "l", "l"]
+	a = ['h', 'e', 'l', 'l', 'o'];
+
+	// 不改变原数组
+	a.join();      // "h,e,l,l,o"
+
+	// 不改变原数组
+	a.toString();      // "h,e,l,l,o"
+
 }
 func7();
