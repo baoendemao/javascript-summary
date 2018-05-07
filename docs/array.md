@@ -15,6 +15,7 @@
 * some    遍历数组的每个元素，只要有一个满足条件，就跳出return true
 * sort   数组的排序，参数是function(a, b) {return a-b 或者 b-a}，改变原数组
 * filter  通过一个条件过滤数组，返回符合条件的新数组，不改变原数组
+* pop   删除最后一个元素，改变原数组
 #### 如何判断是不是数组？  
 * Array.isArray([1, 2, 3])   // true
 * Object.prototype.toString.call([1, 2, 3])  === '[object Array]'   // true
