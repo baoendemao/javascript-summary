@@ -104,6 +104,13 @@ function func7() {
 	});
 	a = ['h', 'e', 'l', 'l', 'o'];
 
+	b = [12, 34, 9, 5];
+	b.sort(function(i, j ) {
+		return i-j;
+	});
+	b;  // 5, 9, 12, 34]
+
+
 	// 改变原数组
 	a.shift();  // 'h'
 	a;          //  ["e", "l", "l", "o"]
