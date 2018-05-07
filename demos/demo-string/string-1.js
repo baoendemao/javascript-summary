@@ -53,3 +53,12 @@ console.log(s.substring(1, 3));   // "el"
 
 // substr函数
 console.log(s.substr(1, 3));    // "ell"
+
+// charCodeAt函数,  返回ASCII码值
+var s2 = 'ABCabc';
+s2.charCodeAt(0);   // 65
+s2.charCodeAt(1);   // 66
+s2.charCodeAt(2);   // 67
+s2.charCodeAt(3);   // 97
+s2.charCodeAt(4);   // 98
+s2.charCodeAt(5);   // 99
