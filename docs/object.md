@@ -115,6 +115,7 @@ Foo.prototype.isPrototypeOf(o);     // true
 Object.prototype.isPrototypeOf(o);  // true
 
 ```
+
 #### es6定义对象新写法
 ```
 var a = 1;
@@ -127,5 +128,23 @@ var o2 = {
   [c]: 3      // 使用的是属性表达式, [c]表示使用c表达式的值作为Key 
 }
 o2;           // {hello: 3}
+
+```
+#### Object.entries()
+```
+var o = {
+	a: 123,
+	b: 456,
+	c: 789
+}
+
+for (let [key, value] of Object.entries(o)) {
+	console.log('key is: ' + key + ', value is: ' + value)
+}
+
+结果是： 
+key is: a, value is: 123
+key is: b, value is: 456
+key is: c, value is: 789
 
 ```
