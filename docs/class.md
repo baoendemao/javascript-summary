@@ -40,3 +40,54 @@ Person.__proto__  === Function.prototype
 Student.__proto__ === Person
 
 ```
+#### get和set方法定义属性
+```
+class  Person {
+  constructor(name, age) {
+    this.name = name;
+	this.age = age;
+  }
+
+  get herAge() {   // 定义只读属性herAge
+    return this.age;
+  }
+
+  get herName() {  // herName是属性，不是方法，对herName属性设置get和set， 拦截该属性的存取行为
+    return this.name;
+  }
+
+  set herName(name) {
+    this.name = name;
+  }
+}
+
+var p = new Person('hello', 10);
+p;                 //  Person {name: "hello", age: 10}age: 10name: "hello"herAge: 10__proto__: Object
+p.herAge;          // 10
+p.herAge = 11;     // 重新赋值不会改变herAge的值
+p.herAge;          // 10
+
+p.herName = 'world'; 
+p.herName;         // 'world'
+p.name;            // 'world'
+
+typeof p.herName;  // 'string'
+```
+
+#### static静态方法
+```
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    static getClassName() {   // 静态方法只能由类名来调用
+        console.log('Person');
+    }
+}
+
+var p = new Person('hello', 10);
+p.getClassName();          // 报错
+Person.getClassName();     // Person
+```
