@@ -18,3 +18,13 @@ function func3(a, b=2) {
 	console.log(b);         // 2
 }
 func3();
+
+function func4(x, y=x) {
+	console.log(x, y);
+}
+func4('hello');       // hello hello
+
+function func5(...args) {
+	console.log(args);  // [2, 3, 4, 5, 6]
+}
+func5(2, 3, 4, 5, 6);   

@@ -51,25 +51,15 @@ Student.prototype = Object.create(Person.prototype);     // 继承父类，ES5�
 var s1 = new Student();
 ```
 
-#### 箭头函数  (demo: demos/demo-function/function-2.js)
+#### 箭头函数  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-function/function-2.js)
 * 箭头函数可以修正map函数里的this指向问题
 
-#### 函数默认参数
+#### 函数默认参数 [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-function/function-1.js)
 
 ```
 function func(a=12) {
 	console.log(a);    // 12
 }
-
-function func2(x, y=x) {
-	console.log(x, y);
-}
-func2('hello');       // hello hello
-
-function func3(...args) {
-	console.log(args);  // [2, 3, 4, 5, 6]
-}
-func3(2, 3, 4, 5, 6);   
 
 ```
 
