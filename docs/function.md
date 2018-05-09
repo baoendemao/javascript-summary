@@ -60,6 +60,17 @@ var s1 = new Student();
 function func(a=12) {
 	console.log(a);    // 12
 }
+
+function func2(x, y=x) {
+	console.log(x, y);
+}
+func2('hello');       // hello hello
+
+function func3(...args) {
+	console.log(args);  // [2, 3, 4, 5, 6]
+}
+func3(2, 3, 4, 5, 6);   
+
 ```
 
 #### 函数的形参的个数
