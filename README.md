@@ -16,5 +16,5 @@
 * [解析赋值](https://github.com/baoendemao/javascript-summary/tree/master/docs/assignment.md)
 * [Set](https://github.com/baoendemao/javascript-summary/tree/master/docs/set.md)
 * [Map](https://github.com/baoendemao/javascript-summary/tree/master/docs/map.md)
-
+* [Proxy](https://github.com/baoendemao/javascript-summary/tree/master/docs/proxy.md)
 
