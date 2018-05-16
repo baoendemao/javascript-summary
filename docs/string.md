@@ -17,7 +17,7 @@
 * substring
     * substring(1, 3) 表示查找下标索引[1, 3)位置的字符串
 * charCodeAt    获得字符串中某个具体字符的 Unicode 编码
-#### 模本字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-2.js) 
+#### 模板字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-2.js) 
 * 写法： 反引号包裹字符串
 * 用处
     * 多行字符串
