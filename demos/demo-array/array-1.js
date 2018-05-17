@@ -153,5 +153,45 @@ function func7() {
 	// 不改变原数组
 	a.toString();      // "h,e,l,l,o"
 
+	// Array.of()生成新的数组
+	var b = Array.of("h", "e", "l", "l", "o")
+	b;  // ["h", "e", "l", "l", "o"]
+	var b = Array.of();
+	b;  // []
+
+	// 找到第一个符合条件的元素
+	a.find(function(value){return value == "h"})   // "h"
+
+	// 找到第一个符合条件的元素的索引下标
+	a.findIndex(function(value){return value == 'h'})
+
+	// keys()得到数组的索引的Iterator对象，用来遍历数组
+	var b = a.keys();
+	b.next();    // {value: 0, done: false}
+	b.next();    // {value: 1, done: false}
+	b.next();    // {value: 2, done: false}
+	b.next();    // {value: 3, done: false}
+	b.next();    // {value: 4, done: false}
+	b.next();    // {value: undefined, done: true}
+
+	// values()得到数组的值的Iterator对象，用来遍历数组
+	var b = a.values();
+	b.next();    // {value: "h", done: false}
+	b.next();    // {value: "e", done: false}
+	b.next();    // {value: "l", done: false}
+	b.next();    // {value: "l", done: false}
+	b.next();    // {value: "o", done: false}
+	b.next();    // {value: undefined, done: true}
+
+	// entries()得到数组对应的键值对的Iterator对象，用来遍历数组
+	var b = a.entries()
+	b.next();    // {value: [0, "h"], done: false}
+	b.next();    // {value: [1, "e"], done: false}
+	b.next();    // {value: [2, "l"], done: false}
+	b.next();    // {value: [3, "l"], done: false}
+	b.next();    // {value: [4, "o"], done: false}
+	b.next();    // {value: undefined, done: true}
+
+
 }
 func7();

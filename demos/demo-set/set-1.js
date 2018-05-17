@@ -6,6 +6,7 @@ s;    // Set(5) {1, 2, 3, 4, 5}
 
 var s = new Set();
 typeof s;   // object
+
 [12, 12, 12, 13].map((x) => {
 	s.add(x)
 });
