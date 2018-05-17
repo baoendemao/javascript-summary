@@ -5,3 +5,5 @@
 * add() 添加一个元素
 * size  获取Set的长度
 * has()  是否存在某个元素，返回布尔值
+* forEach(function(value){ } )
+* delete()  删除某个值
