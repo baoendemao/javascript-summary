@@ -23,15 +23,15 @@ setTimeout(function (name) {
 
           console.log(catList);
 
-        }, 1, 'Lion');
+        }, 1, 'Hello');
 
-      }, 1, 'Snow Leopard');
+      }, 1, 'World');
 
-    }, 1, 'Lynx');
+    }, 1, 'Welcome');
 
-  }, 1, 'Jaguar');
+  }, 1, 'To');
 
-}, 1, 'Panther');
+}, 1, 'China');
 
 ```
 
@@ -82,6 +82,23 @@ promise.then(
         * Pending => Rejected
             * reject函数将Promise对象的状态从Pending变成Rejected
 
+* Promise.all()
+```
+// Promise.all处理多个异步（Promise数组），当所有异步请求全部完成之后，才会执行then
+Promise.all([result1, result2]).then(data => {
+    console.log(data[0]);
+    console.log(data[1]);
+});
+
+```
+* Promise.race()
+```
+// Promise.race处理多个异步（Promise数组），当有一个异步完成，就会执行then
+Promise.race([result1, result2]).then(data => {
+    console.log(data);
+});
+
+```
 * Promise如何捕获异
     * then里写两个实参：success和error的回调函数
 
