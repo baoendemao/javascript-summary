@@ -13,7 +13,7 @@
 * [Async和Await](https://github.com/baoendemao/javascript-summary/tree/master/docs/async-await.md)
 * [RegExp](https://github.com/baoendemao/javascript-summary/tree/master/docs/regexp.md)
 * [Iterator](https://github.com/baoendemao/javascript-summary/tree/master/docs/iterator.md)
-* [解析赋值](https://github.com/baoendemao/javascript-summary/tree/master/docs/assignment.md)
+* [解构赋值](https://github.com/baoendemao/javascript-summary/tree/master/docs/assignment.md)
 * [Set](https://github.com/baoendemao/javascript-summary/tree/master/docs/set.md)
 * [Map](https://github.com/baoendemao/javascript-summary/tree/master/docs/map.md)
 * [Proxy](https://github.com/baoendemao/javascript-summary/tree/master/docs/proxy.md)
