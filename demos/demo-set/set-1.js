@@ -23,7 +23,11 @@ s.forEach(function(value, key) {
 s.delete(12);  // true
 s;             // Set(1) {13}
 
+s.clear();
+s;			  // Set(0) {}
+
 // 可以用于数组去重, 首先s = new Set(数组), 然后使用下面方法转换成数组
+var arr = [12, 12, 12, 13, 13];
+var s = new Set(arr);
 [...s];         //  [12, 13]
 Array.from(s);  // [12, 13]
-
