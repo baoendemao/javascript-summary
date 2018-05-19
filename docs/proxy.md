@@ -1,9 +1,10 @@
-* proxy => 控制对外部对象的访问
+* proxy => 代理，控制对对象的访问
 ```
 var data = {
     name: 'hello'
 };
 
+// Proxy的实现代理的handler，在handler里支持get,set等。 这里的作用类似于Object.defineProperty设置的get,set。
 var handler = {
     get: function(target, key) {
         console.log('get function is called');
