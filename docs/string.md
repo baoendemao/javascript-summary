@@ -11,6 +11,7 @@
 * toUpperCase   大写
 * toLowerCase   小写
 * slice     
+    * slice(1) 表示查找从下标1开始的字符串，一直到末尾
     * slice(1, 3)表示查找下标索引[1, 3)位置的字符串
 * substr  
     * substr(1, 3) 表示查找下标索引[1, 3]位置的字符串
