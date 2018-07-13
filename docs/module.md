@@ -16,7 +16,17 @@ module.exports = xxxxx;
 
 require("xxx.js");
 ```
-* ES6模块管理规范
+* ES6模块
+#### ES6和commonJs的区别
+* ES6
+    * 静态解析的，不是动态加载模块的
+    * 每个模块并不会当做一个对象
+    * 一个模块中会有多个export导出
+    * export导出的并不是值的拷贝，而是模块的引用
+* commonJs
+    * 动态加载模块 => 方便实现懒加载，优化用户体验
+    * 每个模块被视为一个对象
+    * 模块的导出是值的拷贝
 #### 模块化打包工具
 * webpack
 * rollup
