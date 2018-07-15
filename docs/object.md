@@ -36,6 +36,10 @@ Object.getOwnPropertyDescriptor(o, 'a');  // {value: 1, writable: true, enumerab
     set: function (newVal) {
     }
 ```
+
+其中：writable, value属性不能和set(), get()共存
+<br/>
+
 #### 如何获取变量的类型的字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-object/object-2.js)
 * typeof 
 * Object.prototype.toString.call()
