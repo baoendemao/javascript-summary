@@ -6,7 +6,7 @@
 * map 将数组重新处理各个元素的值
     * ['h', 'e', 'l', 'l', 'o'].map(function(i) { })
 * reverse  数组反转， 改变原数组
-* slice  从指定下标开始截取数组, 不改变原数组
+* slice  从指定下标开始截取数组, 不改变原数组, 返回值是一个新数组
 * splice 删除或者替换， 改变原数组
 * shift  数组移除第一个元素，改变原数组
 * unshift   在数组的开头添加元素，改变原数组
@@ -24,6 +24,11 @@
 * keys()   返回数组的索引的Iterator对象，用来遍历数组的索引
 * values()  返回数组的值的Iterator对象，用来遍历数组的值
 * entries() 返回数组对应的键值对的Iterator对象，用来遍历数组
+
+#### 包装类Array
+```
+    [1, 2, 3] instanceof Array   // true
+```
 #### 如何判断是不是数组？  
 * Array.isArray([1, 2, 3])   // true
 * Object.prototype.toString.call([1, 2, 3])  === '[object Array]'   // true
