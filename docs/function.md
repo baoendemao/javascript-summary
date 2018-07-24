@@ -72,6 +72,21 @@ console.log(func.length);     // 5,   得到该函数的形参的个数是5个
 
 ```
 
+#### 函数的prototype属性
+
+```
+// 普通函数有prototype属性
+var a = function(){};  
+console.log(a.prototype);         // {constructor: f}
+a.prototype.constructor === a;    // true
+
+
+// 箭头函数没有prototype属性
+var b = () => {};  
+console.log(b.prototype);        // undefined
+
+```
+
 #### 纯函数
 函数的输出只依赖输入，和其他外部函数和外部变量无关。
 
