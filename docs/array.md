@@ -1,8 +1,20 @@
 #### 常用函数       [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-array/array-1.js)
 * indexOf  获取具体值所在的下标, 找到的第一个
 * lastIndexOf  获取具体值所在的下标，找到的最后一个
-* concat   数组连接，不改变原数组
+* concat   数组连接，不改变原数组, 返回一个新的数组
     * [].concat.call([1, 2, 3], [3, 4, 5])   // [1, 2, 3, 3, 4, 5]
+    * concat返回的是新数组
+    ```
+        var a = [1, 2, 3]; 
+        var b = a.concat();  
+        a == b;    // false
+
+
+        var a = [1, 2, 3];  
+        var b = [4, 5, 6];
+        a.concat(b);  // [1, 2, 3, 4, 5, 6]
+
+    ```
 * map 将数组重新处理各个元素的值
     * ['h', 'e', 'l', 'l', 'o'].map(function(i) { })
 * reverse  数组反转， 改变原数组
