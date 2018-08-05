@@ -81,28 +81,6 @@ b.__proto__ === Object.prototype;
 <br/>
 可见，Object.create(null)不会创建原型连接，所以说比{}更空。
 
-#### Object.assign() 浅拷贝
-
-<br/>
-Object.assign是使用=操作符赋值来实现的浅拷贝
-
-```
-var o = {
-	a: 123,
-	b: 'hello',
-	c: function() {console.log(this);},
-	d: {
-		e: 1
-	}
-}
-var o2 = {}
-
-Object.assign(o2, o)
-o === o2             // false
-o.c === o2.c         // true 
-
-
-```
 
 #### instanceof和isPrototypeOf
 
@@ -150,5 +128,42 @@ for (let [key, value] of Object.entries(o)) {
 key is: a, value is: 123
 key is: b, value is: 456
 key is: c, value is: 789
+
+```
+
+#### 浅拷贝
+* Object.assign是使用=操作符赋值来实现的浅拷贝
+
+```
+var o = {
+	a: 123,
+	b: 'hello',
+	c: function() {console.log(this);},
+	d: {
+		e: 1
+	}
+}
+var o2 = {}
+
+Object.assign(o2, o)    // o2 保存了o的一份浅拷贝
+o === o2             // false
+o.c === o2.c         // true 
+
+
+```
+
+#### 深拷贝 => 最好自己实现
+* Json.stringify => 不适用于 函数、正则、循环引用，仅仅适用于对象属性类型确定的情况下
+```
+var o = {
+	job: 'fe',
+	main: ['js', 'css', 'html'],
+	inner: {
+		a: 'hello'
+	}
+}
+
+var s = JSON.stringify(o);   //  "{"job":"fe","main":["js","css","html"],"inner":{"a":"hello"}}"
+var o2 = JSON.parse(s);       // o2 保存了o的一份浅拷贝
 
 ```
