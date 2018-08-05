@@ -164,6 +164,6 @@ var o = {
 }
 
 var s = JSON.stringify(o);   //  "{"job":"fe","main":["js","css","html"],"inner":{"a":"hello"}}"
-var o2 = JSON.parse(s);       // o2 保存了o的一份浅拷贝
+var o2 = JSON.parse(s);       // o2 保存了o的一份深拷贝，两者是互相不受影响的
 
 ```
