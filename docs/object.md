@@ -68,6 +68,28 @@ Object.is(NaN, NaN);  // true,  返回 NaN !== NaN
 其余的数值比较通过===
 
 ```
+
+#### Object.create()
+* object.create()可以创建出指定原型的对象
+```
+	var o1 = {
+		name: 'hello',
+		job: 'fe'
+	}
+
+	var o2 = Object.create(o1);
+
+	o2.__proto__ === o1;   // true
+```
+* 如何实现object.create()
+```
+	Object.create = function(p) {
+		function f(){};
+		f.prototype = p;
+		return new f();
+	}
+
+```
 #### 区分Object.create(null)和{}
 
 ```
