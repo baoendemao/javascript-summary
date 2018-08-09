@@ -10,9 +10,67 @@
             }
         }
     ```
+
+    * require是浅拷贝：每个模块被视为一个对象， require命令第一次加载该脚本，就会执行整个脚本，然后在内存生成一个对象。特别注意：一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
+    
+    * require浅拷贝例子：
+    ```
+        let count = 1
+        let setCount = () =>; {
+            count++
+        }
+        setTimeout(() =>; {
+            console.log('a', count)
+        }, 1000)
+        module.exports = {
+            count,
+            setCount
+        }
+
+        // b.js
+        let obj = require('./a.js')
+
+        obj.setCount()
+        console.log('b', obj.count)
+
+        node b.js
+        b 1
+        a 2  
+        可以看出，count在b.js文件中复制了一份，setCount只改变了a.js中count值
+    ```
+
+    ```
+
+        // a.js
+        let obj = {
+            count: 1
+        }
+        let setCount = () => {
+            obj.count++
+        }
+        setTimeout(() => {
+            console.log('a', obj.count)
+        }, 1000)
+        module.exports = {
+            obj,
+            setCount
+        }
+
+        // b.js
+        let data = require('./a.js')
+
+        data.setCount()
+        console.log('b', data.obj.count)
+
+        node b.js
+        b 2
+        a 2
+        从以上可以看出，a.js和b.js实际上指向同一个obj对象
+    ```
+
+    * exports的是一个对象，即使导出的是基本数据类型
     * commonJs适合用于服务器，而不适合使用在浏览器端。因为commonJs加载模块是同步的，对于浏览器而言，一旦等待时间过长，浏览器处于”假死”状态。所以在浏览器端又出现了一个规范—-AMD。
     * 动态加载模块 => 方便实现懒加载，优化用户体验
-    * 每个模块被视为一个对象， require命令第一次加载该脚本，就会执行整个脚本，然后在内存生成一个对象。所以一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
     * 模块的导出是浅拷贝
     * 循环引用的官方例子：
     ```
@@ -72,11 +130,23 @@
         import * as o from 'xxx';            //  全部导入, 别名是o
         import name as herName from 'xxx';   //  只导入name，别名是herName
     ```
+
+    * import/export导出的是模块的只读引用(而不是浅拷贝)：一个模块的变量的改变会影响另一个模块； 只读在于从某个模块引入一个变量的时候，不允许修改该变量的值，而对于引用类型，可以添加属性和方法，但是不允许指向另一个内存空间。
+    ```
+        // a.js
+        export var a = 'hello';
+
+        // b.js
+        import {a} from './a.js';
+
+        a = 'world';    // 报错， SyntaxError: "a" is read-only
+
+    ```
     * 静态解析的，不是动态加载模块的。 它遇到模块加载命令import时，不会去执行模块，而是只生成一个引用。等到真的需要用到时，再到模块里面去取值。
     * 每个模块并不会当做一个对象
     * 一个模块中会有多个export导出
-    * export导出的并不是值的拷贝，而是模块的引用
-    * 这导致ES6处理"循环加载"与CommonJS有本质的不同。ES6根本不会关心是否发生了"循环加载"，只是生成一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。
+    * 出现模块之间的循环引用时，只要模块存在某个引用，代码就能够执行。
+
     
 #### 模块化打包工具
 * webpack
