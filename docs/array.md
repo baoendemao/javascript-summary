@@ -59,3 +59,47 @@ console.log(a);   // []
 #### 如何将一个类数组对象转换成为一个真正的数组
 * Array.prototype.slice.call(arguments)
 * Array.from(arguments)
+
+#### 数组的forEach, map, filter, reduce的区别
+* forEach() => 遍历数组中的元素，没有返回
+```
+var a = [1, 2, 3, 4]
+var b = a.forEach(function(i) {
+	console.log(i);
+	return i;
+})
+b;   // undefined
+
+
+```
+
+* map() => 遍历数组中的元素，返回一个新数组
+```
+var a = [1, 2, 3, 4]
+var b = a.map(function(i) {
+	console.log(i);
+	return i*i;
+})
+b;   // [1, 4, 9, 16]
+
+
+```
+
+* filter() => 遍历数组中的元素，为true的加入到新数组中
+```
+var a = [1, 2, 3, 4]
+var b = a.filter(function(i) {
+	return i == 2;
+})
+b;   // [2]
+
+```
+
+* reduce() => 遍历数组中的元素，调用回调函数，将数组元素合成一个值
+```
+var a = [1, 2, 3, 4]
+var b = a.reduce(function(count, i) {
+	return count + i;
+})
+b;    // 10
+```
