@@ -126,3 +126,56 @@ Promise.race([result1, result2]).then(data => {
     });
 
     ```
+#### 如何封装Promise
+* 如文件操作
+```
+const fs = require('fs')
+fs.readFile('aa', (err, data) => {
+    if (err) {
+        console.log(err)
+    } else {
+        console.log(data)
+    }
+})
+
+封装为Promise:
+
+function readFile(path) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(path, (err, data) => {
+            if (err) {
+                reject(err)
+            } else {
+                resolve(data)
+            }
+        })
+    });
+}
+
+调用：
+readFile('aa')
+.then(data => {
+
+})
+.catch(err => {
+
+})
+
+```
+
+####  Node8提供的util.promisify()
+
+```
+const util = require('util');
+const fs = require('fs');
+ 
+util.promisify(fs.readFile)('aa')
+.then(JSON.parse)
+.then((data) => {
+
+})
+.catch((err) => {
+
+});
+
+```
