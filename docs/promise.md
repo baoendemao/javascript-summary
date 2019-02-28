@@ -171,10 +171,10 @@ const fs = require('fs');
  
 util.promisify(fs.readFile)('aa')
 .then(JSON.parse)
-.then((data) => {
+.then(data => {
 
 })
-.catch((err) => {
+.catch(err => {
 
 });
 
