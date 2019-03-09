@@ -21,5 +21,5 @@
 * [Symbol](https://github.com/baoendemao/javascript-summary/tree/master/docs/symbol.md)
 * [JS的加载方式](https://github.com/baoendemao/javascript-summary/tree/master/docs/js-async.md)
 
-### lean 优秀的库
+### lean 优秀的库
 * [co](https://github.com/baoendemao/javascript-summary/tree/master/lean_lib/lean_co/README.md)
