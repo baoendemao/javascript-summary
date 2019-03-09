@@ -1,4 +1,5 @@
-# javascript-summary
+# learn_javascript
+### 基础
 * [变量](https://github.com/baoendemao/javascript-summary/tree/master/docs/variable.md)
 * [Object](https://github.com/baoendemao/javascript-summary/tree/master/docs/object.md)
 * [array](https://github.com/baoendemao/javascript-summary/tree/master/docs/array.md)
@@ -12,10 +13,13 @@
 * [Generator](https://github.com/baoendemao/javascript-summary/tree/master/docs/generator.md)
 * [Async和Await](https://github.com/baoendemao/javascript-summary/tree/master/docs/async-await.md)
 * [RegExp](https://github.com/baoendemao/javascript-summary/tree/master/docs/regexp.md)
-* [Iterator](https://github.com/baoendemao/javascript-summary/tree/master/docs/iterator.md)
+* [Iterator迭代器](https://github.com/baoendemao/javascript-summary/tree/master/docs/iterator.md)
 * [解构赋值](https://github.com/baoendemao/javascript-summary/tree/master/docs/assignment.md)
 * [Set](https://github.com/baoendemao/javascript-summary/tree/master/docs/set.md)
 * [Map](https://github.com/baoendemao/javascript-summary/tree/master/docs/map.md)
 * [Proxy](https://github.com/baoendemao/javascript-summary/tree/master/docs/proxy.md)
 * [Symbol](https://github.com/baoendemao/javascript-summary/tree/master/docs/symbol.md)
 * [JS的加载方式](https://github.com/baoendemao/javascript-summary/tree/master/docs/js-async.md)
+
+### lean优秀的库
+* [co](https://github.com/baoendemao/javascript-summary/tree/master/lean_lib/lean_co/README.md)
