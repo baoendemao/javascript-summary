@@ -163,12 +163,13 @@ readFile('aa')
 
 ```
 
-####  Node8提供的util.promisify()
+####  Node8提供的工具函数util.promisify()
 
 ```
 const util = require('util');
 const fs = require('fs');
  
+// 返回一个promise
 util.promisify(fs.readFile)('aa')
 .then(JSON.parse)
 .then(data => {
