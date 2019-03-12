@@ -25,3 +25,6 @@
 
 ### lean 优秀的库
 * [co](https://github.com/baoendemao/javascript-summary/tree/master/lean_lib/lean_co/README.md)
+* lodash
+* underscore
+* ramda 函数式编程
