@@ -155,3 +155,39 @@
 * gulp
 #### 作用域
 * 模块化隐藏了内部作用域里的变量和函数，就好像在作用域闭包里。
+#### Node的模块
+* 分类
+    * 核心模块，如http,fs,path等
+    * 路径形式的文件模块, 即以.或者..开始的文件路径
+    * 自定义模块
+*  Node的模块实现
+    * （1）路径分析和文件定位
+        * node对引入过的模块都会缓存在内存中，以减少第二次引入带来的开销
+        
+    * （2）编译执行
+        * 模块定义
+        ```
+        function module(id, parent) {
+            this.id = id
+            this.exports = {}
+            this.parent = parent
+            if (parent && parent.children) {
+                parent.children.push(this)
+            }
+            this.filename = null
+            this.loaded = false
+            this.children = []
+        }
+        ```
+        * js模块的编译
+        ```
+        // 在编译之前，为了防止全局污染，js会被封装成:
+        (function(exports, require, module, __filename, __dirname) {
+            var math = require('math');
+
+            // 模块的exports属性被返回给了调用方，exports属性的任何方法和属性都可以被外部调用到，但是模块的其他变量和属性则不可被调用
+            exports.area = function(radius) {
+                return Math.PI * radius * radius;
+            }
+        })
+        ```
