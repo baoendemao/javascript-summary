@@ -21,7 +21,7 @@
 #### 模板字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-2.js) 
 * 写法： 反引号包裹字符串
 * 用处
-    * 多行字符串
+    * 跨行
     * 字符串中嵌入js表达式，需要将其写到${}
 #### 如何将变量转换成字符串  [demo点这里](https://github.com/baoendemao/javascript-summary/tree/master/demos/demo-string/string-3.js) 
 * 如果是引用类型（引用类型包括数组），使用JSON.stringify()

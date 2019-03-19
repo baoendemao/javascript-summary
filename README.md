@@ -20,6 +20,8 @@
 * [Proxy](https://github.com/baoendemao/javascript-summary/tree/master/docs/proxy.md)
 * [Symbol](https://github.com/baoendemao/javascript-summary/tree/master/docs/symbol.md)
 * [JS 异步](https://github.com/baoendemao/javascript-summary/tree/master/docs/js-async.md)
+* [Decorator](https://github.com/baoendemao/javascript-summary/tree/master/docs/decorator.md)
+
 
 
 ### 设计模式
@@ -54,3 +56,6 @@
 
 ### lean 优秀的库
 * [co](https://github.com/baoendemao/javascript-summary/tree/master/lean_lib/lean_co/README.md)
+* lodash
+* underscore
+* ramda 函数式编程
