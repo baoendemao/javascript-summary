@@ -40,7 +40,7 @@ Person.__proto__  === Function.prototype
 Student.__proto__ === Person
 
 ```
-#### get和set方法定义属性
+#### get，set, __defineGetter__, __defineSetter__
 ```
 class  Person {
   constructor(name, age) {
@@ -49,14 +49,17 @@ class  Person {
   }
 
   get herAge() {   // 定义只读属性herAge
+    console.log('get herAge');
     return this.age;
   }
 
   get herName() {  // herName是属性，不是方法，对herName属性设置get和set， 拦截该属性的存取行为
+    console.log('get herName');
     return this.name;
   }
 
   set herName(name) {
+    console.log('set herName')
     this.name = name;
   }
 }
@@ -72,6 +75,13 @@ p.herName;         // 'world'
 p.name;            // 'world'
 
 typeof p.herName;  // 'string'
+
+// 在对象定义后, 给对象添加getter或setter方法要通过两个特殊的方法__defineGetter__和__defineSetter__
+// 这两个函数要求第一个是getter或setter的名称，以string给出，第二个参数是作为getter或setter的函数
+Person.prototype.__defineGetter__('hello', function() {console.log('hello world')})
+
+console.log(p.hello)    // hello world
+
 ```
 
 #### static静态方法

@@ -148,6 +148,12 @@
     * 一个模块中会有多个export导出
     * 出现模块之间的循环引用时，只要模块存在某个引用，代码就能够执行。
 
+#### require, module, module.exports
+* exports
+```
+    exports === module.exports;    // true
+
+```
     
 #### 模块化打包工具
 * webpack

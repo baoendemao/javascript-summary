@@ -38,4 +38,7 @@ s instanceof String;                // true
 typeof s;                           // "object"
 Object.prototype.toString.call(s);  // "[object String]"
 
+var s_2 = 'hello';
+s == s_2;      // true
+
 ```
