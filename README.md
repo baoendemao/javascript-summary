@@ -1,6 +1,7 @@
 # learn_javascript
 ### 基础
 * [变量](https://github.com/baoendemao/javascript-summary/tree/master/docs/variable.md)
+* [表达式](https://github.com/baoendemao/javascript-summary/tree/master/docs/expression.md)
 * [Object](https://github.com/baoendemao/javascript-summary/tree/master/docs/object.md)
 * [array](https://github.com/baoendemao/javascript-summary/tree/master/docs/array.md)
 * [string](https://github.com/baoendemao/javascript-summary/tree/master/docs/string.md)
