@@ -20,6 +20,12 @@ console.log(s.charAt(1));  // e
 // 获取字符所在的索引下标
 console.log(s.indexOf('e'));  // 1
 
+s.lastIndexOf('l', 1)   // -1
+s.lastIndexOf('l', 2)   // 2
+s.lastIndexOf('l', 3)   // 3
+s.lastIndexOf('l', 9)   // 3
+
+
 // 是否字符串s是以he开头的，返回布尔值true或false
 console.log(s.startsWith('he'));  // true
 
